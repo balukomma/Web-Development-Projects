@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability - Tirdha Spaces</title>
+    <style>
+        /* General Section Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        /* Navigation Tabs */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff9f00;
+            border-radius: 5px;
+            color: #000;
+        }
+
+        .active {
+            background-color: #ff9f00;
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding-top: 100px; /* Adjusted for navigation bar height */
+        }
+
+        /* Sustainability Section */
+        .sustainability-section {
+            padding: 60px 20px;
+            background: url('sustainability-bg.jpg') no-repeat center center/cover; /* Replace with your background image */
+            color: #fff;
+            text-align: center;
+        }
+
+        .sustainability-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for content */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .sustainability-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #FFD700; /* Gold color for the title */
+            text-transform: uppercase;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .sustainability-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: #333;
+            border-radius: 8px;
+            animation: fadeInUp 2s ease-in-out;
+            text-align: left;
+        }
+
+        .sustainability-box h3 {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .sustainability-box p, .sustainability-box ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .sustainability-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sustainability-box ul li {
+            margin: 10px 0;
+            line-height: 1.5;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html" id="home-tab" class="nav-link">Home</a></li>
+            <li><a href="about.html" id="about-tab" class="nav-link">About Us</a></li>
+            <li><a href="sustainability.html" id="sustainability-tab" class="nav-link active">Sustainability</a></li>
+            <li><a href="products.html" id="products-tab" class="nav-link">Products</a></li>
+            <li><a href="contactus.html" id="contact-tab" class="nav-link">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="sustainability-section">
+        <div class="sustainability-container">
+            <h2 class="sustainability-title">Our Commitment to Sustainability</h2>
+            <div class="sustainability-box">
+                <h3>Eco-Friendly Materials</h3>
+                <p>
+                    At <strong>Tirdha Spaces</strong>, we prioritize the use of <span class="highlight">sustainable</span> 
+                    and <span class="highlight">non-toxic</span> materials in our construction process. This ensures 
+                    durability while maintaining minimal environmental impact.
+                </p>
+            </div>
+            <div class="sustainability-box">
+                <h3>Energy-Efficient Design</h3>
+                <p>
+                    Our homes are designed to be <strong>energy-efficient</strong>, helping homeowners reduce their 
+                    energy consumption and lower their carbon footprint while saving on utility bills.
+                </p>
+            </div>
+            <div class="sustainability-box">
+                <h3>Recycled and Renewable Resources</h3>
+                <ul>
+                    <li><strong>Recycled Materials:</strong> We incorporate recycled materials wherever possible.</li>
+                    <li><strong>Renewable Energy:</strong> Solar energy integration to power homes.</li>
+                    <li><strong>Water Conservation:</strong> Systems designed to reduce water usage.</li>
+                </ul>
+            </div>
+            <div class="sustainability-box">
+                <h3>Why Choose Our Sustainable Homes?</h3>
+                <p>
+                    By choosing <strong>Tirdha Spaces</strong>, you are investing in a home that aligns with your 
+                    values of sustainability and eco-conscious living. Our homes are built to last, provide comfort, 
+                    and minimize environmental impact.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
