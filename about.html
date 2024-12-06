@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us - Tirdha Spaces</title>
+    <!-- Font Awesome CDN for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff9f00;
+            border-radius: 5px;
+            color: #000;
+        }
+
+        .active {
+            background-color: #ff9f00;
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background: url('t-7.jpeg') no-repeat center center/cover; /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards 0.5s;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            /* Removed background color */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeInUp 1s forwards 1s;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: rgba(255, 215, 0, 0.8); /* Semi-transparent gold color for the title */
+            text-transform: uppercase;
+            opacity: 5;
+            animation: slideIn 1s forwards 1.5s;
+        }
+
+        .about-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(67, 63, 63, 0.8); /* Semi-transparent background for content */
+            border-radius: 8px;
+            text-align: left;
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        .about-box h3 {
+            font-size: 1.5rem;
+            color: rgba(255, 215, 0, 0.8); /* Semi-transparent gold color */
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .about-box p, .about-box ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .about-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-box ul li {
+            margin: 10px 0;
+            line-height: 1.5;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: rgba(255, 215, 0, 0.8); /* Transparent gold highlight */
+            font-weight: bold;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Hover effect on about box */
+        .about-box:hover {
+            transform: translateY(20px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="brand">TIRDHA SPACES</a>
+        <ul class="navbar">
+            <li><a href="index.html" id="home-tab" class="nav-link">Home</a></li>
+            <li><a href="about.html" id="about-tab" class="nav-link active">About Us</a></li>
+            <li><a href="sustainability.html" id="sustainability-tab" class="nav-link">Sustainability</a></li>
+            <li><a href="products.html" id="products-tab" class="nav-link">Products</a></li>
+            <li><a href="contact.html" id="contact-tab" class="nav-link">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="about-title">About Us</h2>
+            <div class="about-box">
+                <h3>Our Mission</h3>
+                <p>
+                    At <strong>TirdhaSpaces</strong>, our mission is to revolutionize modern housing with 
+                    prefabricated homes that are a perfect blend of <span class="highlight">strength</span>, 
+                    <span class="highlight">speed</span>, and <span class="highlight">style</span>. 
+                    We aim to create homes that adapt to your evolving needs, ensuring functionality and portability.
+                </p>
+            </div>
+            <div class="about-box">
+                <h3>What We Offer</h3>
+                <p>
+                    Our homes are designed with versatility in mind, catering to a wide range of preferences. 
+                    Whether you need a compact <strong>8x12 feet</strong> home for minimalistic living or a spacious 
+                    <strong>16x16 feet</strong> layout for families, we deliver high-quality, precision-engineered homes.
+                </p>
+            </div>
+            <div class="about-box">
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Sustainability:</strong> Eco-friendly materials and energy-efficient processes.</li>
+                    <li><strong>Quality:</strong> Durable construction with attention to detail.</li>
+                    <li><strong>Flexibility:</strong> Portable designs that adapt to your lifestyle.</li>
+                </ul>
+            </div>
+            <div class="about-box">
+                <h3>Why Choose Us?</h3>
+                <p>
+                    At <strong>TirdhaSpaces</strong>, we redefine what a home means by focusing on innovative designs 
+                    that prioritize your comfort and convenience. With a customer-first approach, we ensure that each 
+                    home exceeds expectations in terms of durability, aesthetic appeal, and affordability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tirdha Spaces</title>
+    <!-- Font Awesome CDN for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.9); /* Reduced intensity of black */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Reduced black with transparency */
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff9f00;
+            border-radius: 5px;
+            color: #000;
+        }
+
+        .active {
+            background-color: #ff9f00;
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* Branding */
+        .brand {
+            font-size: 2rem;
+            color: #FFD700; /* Gold color for branding */
+            font-weight: bold;
+            position: absolute;
+            left: 20px;
+            top: 1rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('t-9.jpeg') no-repeat center center/cover; /* Layered transparency */
+            color: #fff;
+            text-align: center;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .products-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #FFD700; /* Gold color for the title */
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgba(51, 51, 51, 0.8); /* Semi-transparent dark gray */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        .product-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .product-card p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .product-card .details {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #FFD700;
+            color: #000;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ffcc00;
+        }
+
+        /* Keyframe Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">TIRDHA SPACES</div>
+        <ul class="navbar">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="sustainability.html" class="nav-link">Sustainability</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+        </ul>       
+    </nav>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="products-container">
+            <h2 class="products-title">Our Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="8x12-home.jpg" alt="8x12 Feet Home">
+                    <h3>8x12 Feet Home</h3>
+                    <p>Compact and functional, perfect for minimalistic living. Ideal for small families or as a cozy retreat.</p>
+                    <div class="details">
+                        <p><strong>Size:</strong> 8x12 Feet</p>
+                        <p><strong>Features:</strong> Modular, disassemble and reassemble, ideal for limited space.</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="16x16-home.jpg" alt="16x16 Feet Home">
+                    <h3>16x16 Feet Home</h3>
+                    <p>Spacious and versatile, ideal for families or businesses. A perfect balance of comfort and functionality.</p>
+                    <div class="details">
+                        <p><strong>Size:</strong> 16x16 Feet</p>
+                        <p><strong>Features:</strong> Spacious, customizable layout, disassemble and reassemble with ease.</p>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="custom-modular-home.jpg" alt="Customizable Modular Homes">
+                    <h3>Customizable Modular Homes</h3>
+                    <p>Tailored to your specific needs, offering a variety of layouts and designs for maximum flexibility.</p>
+                    <div class="details">
+                        <p><strong>Size:</strong> Customizable</p>
+                        <p><strong>Features:</strong> Flexible design, fully modular, disassembly and reassembly options.</p>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="luxury-prefab-home.jpg" alt="Luxury Prefabricated Homes">
+                    <h3>Luxury Prefabricated Homes</h3>
+                    <p>High-end finishes and modern designs. Perfect for those seeking a luxurious, portable living space.</p>
+                    <div class="details">
+                        <p><strong>Size:</strong> Varies</p>
+                        <p><strong>Features:</strong> Premium materials, modern finishes, fully customizable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
